@@ -1,0 +1,26 @@
+<!--
+  Generated template for the AddDataPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>My Expense</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <h2>Add Data</h2>
+  <form (ngSubmit)="saveData()">
+    <ion-item *ngFor="let x of counts;let i = index;">
+      <ion-label>{{ i+ 1 }}</ion-label>
+      <ion-label>{{counts[i].lastName }}</ion-label>
+      <ion-input type="number" placeholder='0' [(ngModel)]="counts[i].count" name="i" required="" ></ion-input>
+    </ion-item>
+    <button ion-button type="submit" block>Save Data</button>
+  </form>
+</ion-content>

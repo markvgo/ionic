@@ -1,0 +1,29 @@
+<!--
+  Generated template for the AddDataPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Job Detail</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <h2>Add Job</h2>
+  <form (ngSubmit)="saveJob()">
+    <ion-item>
+      <ion-label>Start Date</ion-label>
+      <ion-datetime displayFormat="MM/DD/YYYY" [(ngModel)]="job.startDate" name="date" required=""></ion-datetime>
+    </ion-item>
+    <ion-item>
+      <ion-label>Description</ion-label>
+      <ion-input [(ngModel)]="job.description" name="description" required=""></ion-input>
+    </ion-item>
+    <button ion-button type="submit" block>Save Job</button>
+  </form>
+</ion-content>
